@@ -1,6 +1,6 @@
 function Header() {
   return (
-    <div className="px-2 flex flex-col">
+    <div className="px-2 flex flex-col w-full">
       <h1 className="pt-1 text-2xl text-nyellow font-bold">
         williamcwhite.dev
       </h1>

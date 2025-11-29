@@ -68,16 +68,16 @@ function ProjectSlide({
   })
 
   return (
-    <div className="slide-shadow rounded-xl p-3 flex flex-col justify-center items-center">
-      <div className="section-1">
-        <h2 className="text-xl text-nyellow">{project.title}</h2>
+    <div className="slide-shadow rounded-xl p-3 flex flex-col justify-center md:flex-row md:items-stretch">
+      <div className="md:w-1 md:grow">
+        <h2 className="text-xl lg:text-2xl text-nyellow">{project.title}</h2>
         <img className="my-2 rounded-md" src={images[project.idx]} />
         <nav className="py-2 gap-1 flex flex-row flex-wrap justify-center items-center">
           {...links}
         </nav>
       </div>
-      <div className="my-2 w-full h-px bg-ncomment"></div>
-      <div className="section-2">
+      <div className="my-2 w-full h-px bg-ncomment md:my-0 md:mx-4 md:w-px md:h-auto"></div>
+      <div className="flex flex-col justify-center gap-2 md:w-1 md:grow">
         <p>
           {project.description}
         </p>

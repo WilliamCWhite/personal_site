@@ -59,52 +59,51 @@ function App() {
   }
 
   return (
-    <div className="flex flex-col">
-      <Header />
-      <main className="flex flex-col justify-center items-center">
-        <div className="w-full px-2 flex flex-col justify-center">
-
-{/* TODO: Add little dot widget that shows what page you're on */}
-          <div className="gap-4 py-2 flex flex-row justify-center items-center">
-            <div onClick={()=>changePage(-1)} className="flex justify-center items-center border border-ncomment rounded-full py-2 pl-1.5 pr-2.5">
-              <img className="w-4 h-4" src={leftIcon}/>
+    // Contains everything
+    <div className="flex flex-col min-h-screen min-w-screen items-center">
+      {/* Column containing all content  TODO: adjust max width*/}
+      <div className="flex flex-col items-center h-full w-full max-w-6xl">
+        <Header />
+        {/*Column Containing all primary content */}
+        <main className="flex flex-col items-center w-full grow px-2 lg:text-lg">
+            {/* Row Containing buttons */}
+            <div className="gap-4 py-2 flex flex-row  justify-center items-center">
+              <div onClick={()=>changePage(-1)} className="flex justify-center items-center border border-ncomment rounded-full py-2 pl-1.5 pr-2.5">
+                <img className="w-4 h-4" src={leftIcon}/>
+              </div>
+              <div className="min-w-16">
+                <DotWidget page={page} totalPages={slides.length} />
+              </div>
+              <div onClick={()=>changePage(1)} className="flex justify-center items-center border border-ncomment rounded-full py-2 pl-2.5 pr-1.5">
+                <img className="w-4 h-4" src={rightIcon}/>
+              </div>
             </div>
-            <div className="min-w-16">
-              <DotWidget page={page} totalPages={slides.length} />
-            </div>
-            <div onClick={()=>changePage(1)} className="flex justify-center items-center border border-ncomment rounded-full py-2 pl-2.5 pr-1.5">
-              <img className="w-4 h-4" src={rightIcon}/>
-            </div>
-          </div>
 
-          <section className="relative flex flex-col w-full">
-            <AnimatePresence initial={false} custom={direction} >
-              <motion.div
-                key={page}           
+            <section className="relative flex flex-col w-full grow">
+              <AnimatePresence initial={false} custom={direction} >
+                <motion.div
+                  key={page}           
 
-                custom={direction}
-                variants={slideVariants}
-                initial="enter"
-                animate="center"
-                exit="exit"
-                transition={
-                  {
-                    x: { type: "spring", stiffness: 400, damping: 30 },
-                    opacity: { duration: 0.2 }
+                  custom={direction}
+                  variants={slideVariants}
+                  initial="enter"
+                  animate="center"
+                  exit="exit"
+                  transition={
+                    {
+                      x: { type: "spring", stiffness: 400, damping: 30 },
+                      opacity: { duration: 0.2 }
+                    }
                   }
-                }
-                className="absolute"
-              >
-                <div className="w-full flex justify-center items-center">
-                  {slides[page]}
-                </div>
-              </motion.div>
-            </AnimatePresence>
-          </section>
-        </div>
+                  className="absolute w-full h-full"
+                >
+                    {slides[page]}
+                </motion.div>
+              </AnimatePresence>
+            </section>
 
-      </main>
-
+        </main>
+      </div>
     </div>
   )
 }
