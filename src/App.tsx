@@ -11,6 +11,7 @@ import rightIcon from "./assets/icons/next.png"
 // Import project data and create slides array
 import project_data from "./assets/project_data.json"
 import { useState } from "react"
+import DotWidget from "./components/DotWidget"
 const projects: ProjectObj[] = project_data.projects as ProjectObj[];
 
 const projectSlides = projects.map((project: ProjectObj) => {
@@ -64,9 +65,12 @@ function App() {
         <div className="w-full px-2 flex flex-col justify-center">
 
 {/* TODO: Add little dot widget that shows what page you're on */}
-          <div className="gap-8 py-2 flex flex-row justify-center items-center">
+          <div className="gap-4 py-2 flex flex-row justify-center items-center">
             <div onClick={()=>changePage(-1)} className="flex justify-center items-center border border-ncomment rounded-full py-2 pl-1.5 pr-2.5">
               <img className="w-4 h-4" src={leftIcon}/>
+            </div>
+            <div className="min-w-16">
+              <DotWidget page={page} totalPages={slides.length} />
             </div>
             <div onClick={()=>changePage(1)} className="flex justify-center items-center border border-ncomment rounded-full py-2 pl-2.5 pr-1.5">
               <img className="w-4 h-4" src={rightIcon}/>
