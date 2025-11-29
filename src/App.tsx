@@ -28,7 +28,7 @@ function App() {
           </div>
 
           <section className="flex flex-col">
-            <ProjectSlide project={projects[1]} />
+            <ProjectSlide project={projects[0]} />
 
           </section>
         </div>

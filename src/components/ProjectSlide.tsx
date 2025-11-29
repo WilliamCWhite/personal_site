@@ -44,10 +44,17 @@ function ProjectSlide({
 }: ProjectProps) {
 
   const links = project.links.map((link: ProjectLink) => {
+    let divClasses = "cyan-box";
+    let iconClasses = "w-6 h-6"
+    if (link.type == "primary") {
+      divClasses = "yellow-box"
+      iconClasses = "w-4 h-4"
+    }
+
     return (
       <a href={link.url}>
-        <div>
-          <img src={linkIconMap[link.iconName]} />
+        <div className={`${divClasses} px-2 py-1 gap-1 rounded-md flex w-fit items-center`}>
+          <img className={iconClasses} src={linkIconMap[link.iconName]} />
           <p>{link.label}</p>
         </div>
       </a>
@@ -61,21 +68,21 @@ function ProjectSlide({
   })
 
   return (
-    <div className="project-container">
+    <div className="slide-shadow rounded-xl p-3 flex flex-col justify-center items-center">
       <div className="section-1">
-        <h2>{project.title}</h2>
-        <img src={images[project.idx]} />
-        <nav className="link-list">
+        <h2 className="text-xl text-nyellow">{project.title}</h2>
+        <img className="my-2 rounded-md" src={images[project.idx]} />
+        <nav className="py-2 gap-1 flex flex-row flex-wrap justify-center items-center">
           {...links}
         </nav>
       </div>
-      <div className="divider"></div>
+      <div className="my-2 w-full h-px bg-ncomment"></div>
       <div className="section-2">
         <p>
           {project.description}
         </p>
-        <p>Technologies:</p>
-        <div className="skill-list">
+        <p className="pt-1 text-npurple text-lg">Technologies:</p>
+        <div className="py-2 gap-1 flex flex-row flex-wrap justify-center items-center">
           {...skills}
         </div>
         
