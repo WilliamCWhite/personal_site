@@ -67,7 +67,7 @@ function Skill(props: SkillProps) {
   return (
     <div className={`${SkillMap[props.skillKey].class} flex w-fit items-center gap-1 px-2 py-1 rounded-md`}>
       <img className="w-6 h-6" src={SkillMap[props.skillKey].icon}/>
-      <p className="text-lg">{SkillMap[props.skillKey].label}</p>
+      <p className="text-base">{SkillMap[props.skillKey].label}</p>
     </div>
   )
 }
