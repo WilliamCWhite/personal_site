@@ -36,7 +36,7 @@ const SkillKeys = {
   TYPESCRIPT: "typescript",
 } as const;
 
-type SkillKey = typeof SkillKeys[keyof typeof SkillKeys];
+export type SkillKey = typeof SkillKeys[keyof typeof SkillKeys];
 
 export const SkillMap = {
   [SkillKeys.AWS]: { icon: awsIcon, label: "AWS", class: "yellow-box" },
