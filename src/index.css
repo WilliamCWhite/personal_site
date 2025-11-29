@@ -1,1 +1,16 @@
 @import "tailwindcss";
+
+
+@theme {
+  --font-main: 'Cascadia Code', monospace;
+
+  --color-nred: #FF4C4C;
+  --color-nyellow: #EBB723;
+  --color-ngreen: #51CC51;
+  --color-ncyan: #1CBAAC;
+  --color-nblue: #3081F2;
+  --color-npurpple: #CC66CC;
+  --color-nwhite: #B8D8D8;
+  --color-ncomment: #1e7099;
+  --color-nbg: #132237;
+}
