@@ -1,0 +1,22 @@
+{
+  "links": [
+    {
+      "type": "primary",
+      "url": "https://williamcwhite.dev/basic_notes",
+      "iconName": "play",
+      "label": "Try Basic Notes"
+    },
+    {
+      "type": "secondary",
+      "url": "https://github.com/WilliamCWhite/basic_notes_frontend",
+      "iconName": "github",
+      "label": "Frontend Repo"
+    },
+    {
+      "type": "secondary",
+      "url": "https://github.com/WilliamCWhite/basic_notes_backend",
+      "iconName": "github",
+      "label": "Backend Repo"
+    }
+  ],
+}
