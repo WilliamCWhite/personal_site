@@ -17,7 +17,9 @@ const linkIconMap = {
 
 // IMAGE COMPOSABILITY (SOMEWHAT)
 import project0img from "../assets/images/project0.png"
-const images = [project0img]
+import project1img from "../assets/images/project1.png"
+import project2img from "../assets/images/project2.png"
+const images = [project0img, project1img, project2img]
 
 // PROJECT COMPOSABILITY TYPES
 export interface ProjectLink {
@@ -68,7 +70,7 @@ function ProjectSlide({
   })
 
   return (
-    <div className="slide-shadow rounded-xl p-3 flex flex-col justify-center md:flex-row md:items-stretch">
+    <div className="slide-shadow rounded-xl p-3 flex flex-col justify-center md:px-6 md:py-4 md:flex-row md:items-stretch">
       <div className="md:w-1 md:grow">
         <h2 className="text-xl lg:text-2xl text-nyellow">{project.title}</h2>
         <img className="my-2 rounded-md" src={images[project.idx]} />

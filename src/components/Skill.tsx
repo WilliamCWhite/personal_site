@@ -32,6 +32,7 @@ const SkillKeys = {
   POSTGRES: "postgres",
   PYTHON: "python",
   REACT: "react",
+  REACT_NATIVE: "reactNative",
   TAILWIND: "tailwind",
   TYPESCRIPT: "typescript",
 } as const;
@@ -49,11 +50,12 @@ export const SkillMap = {
   [SkillKeys.GOLANG]: { icon: golangIcon, label: "Golang", class: "cyan-box" },
   [SkillKeys.JAVA]: { icon: javaIcon, label: "Java", class: "red-box" },
   [SkillKeys.JAVASCRIPT]: { icon: jsIcon, label: "JavaScript", class: "yellow-box" },
-  [SkillKeys.NGINX]: { icon: nginxIcon, label: "Nginx", class: "green-box" },
+  [SkillKeys.NGINX]: { icon: nginxIcon, label: "NGINX", class: "green-box" },
   [SkillKeys.NODEJS]: { icon: nodejsIcon, label: "Node.js", class: "green-box" },
   [SkillKeys.POSTGRES]: { icon: postgresIcon, label: "PostgreSQL", class: "blue-box" },
   [SkillKeys.PYTHON]: { icon: pythonIcon, label: "Python", class: "yellow-box" },
   [SkillKeys.REACT]: { icon: reactIcon, label: "React", class: "cyan-box" },
+  [SkillKeys.REACT_NATIVE]: { icon: reactIcon, label: "React Native", class: "cyan-box" },
   [SkillKeys.TAILWIND]: { icon: tailwindIcon, label: "Tailwind", class: "cyan-box" },
   [SkillKeys.TYPESCRIPT]: { icon: tsIcon, label: "TypeScript", class: "blue-box" },
 };

@@ -3,7 +3,7 @@
     {
       "idx": 0,
       "title": "Tallykeeper",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed mauris a arcu viverra varius tempus eget metus. Fusce vitae odio sollicitudin, ornare enim quis, facilisis ante. Vivamus ornare lectus quis gravida sodales. Proin consequat dui ut justo pretium, venenatis sagittis ex congue. Maecenas fermentum posuere magna ornare imperdiet. Vestibulum ante tellus, auctor vel vehicula in, tincidunt sed eros. Vivamus auctor dignissim vulputate. Nulla convallis ut ipsum et laoreet. Vivamus eget venenatis massa. Pellentesque congue justo massa, vitae tempor tortor euismod in. Nulla facilisi. Morbi in nibh eget eros porttitor facilisis vel non libero.",
+      "description": "Tallykeeper is a scorekeeping app built with React, server-side Go code for its API, and a Postgres database. I settled on this project idea for its simplicity, since it allowed me to focus on learning key web development technologies: using Typescript with React, using Go for backend (I also just wanted to learn Go), using JWTs for authentication and persistent sessions, using Tailwind and making fully responsive UI's, multi-layered database dependencies (users -> lists -> list entries), and using Docker for both development and production. The end result is a simple but polished experience on desktop and mobile. From making this app, I've developed solid foundations in web technologies, and I'm prepared for much more featureful projects.",
       "links": [
         {
           "type": "primary",
@@ -24,12 +24,12 @@
           "label": "Backend Repo"
         }
       ],
-      "technologies": ["react", "golang", "postgres", "typescript", "tailwind"]
+      "technologies": ["react", "golang", "postgres", "typescript", "tailwind", "docker"]
     },
     {
       "idx": 1,
       "title": "Basic Notes",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed mauris a arcu viverra varius tempus eget metus. Fusce vitae odio sollicitudin, ornare enim quis, facilisis ante. Vivamus ornare lectus quis gravida sodales. Proin consequat dui ut justo pretium, venenatis sagittis ex congue. Maecenas fermentum posuere magna ornare imperdiet. Vestibulum ante tellus, auctor vel vehicula in, tincidunt sed eros. Vivamus auctor dignissim vulputate. Nulla convallis ut ipsum et laoreet. Vivamus eget venenatis massa. Pellentesque congue justo massa, vitae tempor tortor euismod in. Nulla facilisi. Morbi in nibh eget eros porttitor facilisis vel non libero.",
+      "description": "Basic Notes introduced me to full-stack development by honing my frontend skills in React, my backend skills in Node.js, and introducing me to databases via Postgres. The app features a toggleable, sortable sidebar, full REST operations for all notes, autosaving, and a rudimentary login system. To prevent open access to user data, devices are provided with a secret user key on login which the backend requires for all operations on the user's data. Throughout the development, I became comfortable managing React's state and props, I learned how to make REST APIs, and I familiarized myself with full-stack architecture.",
       "links": [
         {
           "type": "primary",
@@ -51,6 +51,20 @@
         }
       ],
       "technologies": ["react", "nodejs", "postgres"]
+    },
+    {
+      "idx": 2,
+      "title": "ReVision",
+      "description": "ReVision was my team's submission for GateHacks 2025, Colgate University's annual hackathon. As a group of avid readers, we strived to reinvent the smartphone e-reader by making an attention-grabbing, smartphone-tailored experience. Our app boasts a full e-reader UI built on React Native, with a pixelated theme that fit our timeline. We focused on two features: automatic image generation, and reading summaries. We developed a Python script to split a text into chunks and prompt DALL-E, whose images were then inserted into the EPUB file. For reading summaries, we took the past ~500 words before the user's location in a book, and used ChatGPT's api. We ended up getting 2nd place at the hackathon. This project improved my ability to program with a team, and we plan to fully develop the app in the future.",
+      "links": [
+        {
+          "type": "secondary",
+          "url": "https://github.com/ethanrackleff/gateHack",
+          "iconName": "github",
+          "label": "View the Repo"
+        }
+      ],
+      "technologies": ["reactNative", "python", "typescript"]
     }
   ]
 

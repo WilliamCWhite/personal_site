@@ -1,3 +1,5 @@
+// TODO: Create some sort of page-tracking animated widget
+
 import Header from "./components/Header"
 import AboutSlide from "./components/AboutSlide"
 import ProjectSlide from "./components/ProjectSlide"
@@ -60,8 +62,8 @@ function App() {
 
   return (
     // Contains everything
-    <div className="flex flex-col min-h-screen min-w-screen items-center">
-      {/* Column containing all content  TODO: adjust max width*/}
+    <div className="flex flex-col min-h-screen grow min-w-screen items-center">
+      {/* Column containing all content */}
       <div className="flex flex-col items-center h-full w-full max-w-6xl">
         <Header />
         {/*Column Containing all primary content */}
@@ -95,7 +97,7 @@ function App() {
                       opacity: { duration: 0.2 }
                     }
                   }
-                  className="absolute w-full h-full"
+                  className="absolute w-full h-full pb-4"
                 >
                     {slides[page]}
                 </motion.div>

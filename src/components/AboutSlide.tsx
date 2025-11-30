@@ -2,7 +2,7 @@ import Skill from "./Skill";
 
 function AboutSlide() {
   return (
-    <div className="slide-shadow rounded-xl p-3 flex flex-col justify-center md:flex-row md:items-stretch">
+    <div className="slide-shadow rounded-xl p-3 flex flex-col justify-center md:flex-row md:items-stretch md:px-6 md:py-12">
       <div className="md:w-1 md:grow">
         <p className="">
           Hi, I'm <span className="yellow">William</span>, a <span className="cyan">Software Engineer</span> studying <span className="blue">Computer Science</span> and <span className="purple">Philosophy</span> at <span className="red">Colgate University</span>.
